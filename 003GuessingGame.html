@@ -1,17 +1,11 @@
 <script>
 
 var your_latest_guess = prompt("This game took the previous player three guesses. Guess how many guesses this game USUALLY takes.");
-
-var average_guesses,
-  your_guesses,
-  times_played,
-  message,
-  win;
-
-average_guesses = 3;
-your_guesses = 0;
-times_played = 2;
-win = false;
+var average_guesses = 3,
+  your_guesses = 0,
+  times_played = 2,
+  win = false,
+  message;
 
 var play = function() {
   if (your_latest_guess == average_guesses) {

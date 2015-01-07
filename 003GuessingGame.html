@@ -1,6 +1,6 @@
 <script>
 
-var your_latest_guess = prompt("This game took the previous player three guesses. Guess how many guesses this game USUALLY takes.");
+var your_latest_guess = prompt("This game took the previous player three guesses. Guess how many guesses this game USUALLY takes. When you are ready to give up, press'q'.");
 var average_guesses = 3,
   your_guesses = 0,
   times_played = 2,
@@ -13,17 +13,18 @@ var play = function() {
     win = true;
     message = "Amazing! You did it! If you want to play again, click OK and refresh the page.";
   }
-
   else if (your_latest_guess > average_guesses) {
     your_guesses += 1;
     message = "Nope, too high! Guess again.";
   }
-
   else if (your_latest_guess < average_guesses) {
     your_guesses += 1;
     message = "Nope, too low! Guess again.";
   }
-
+  else if (your_latest_guess == "q") {
+    message = "Nobody likes a quiter." 
+    win = true; 
+  }
   else {
     message = "That ... doesn't qualify as a guess?  Try again with a number."
   }
